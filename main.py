@@ -1,6 +1,6 @@
 from pathlib import Path
 
-
+path_bd = Path("Sincro_Escala/BD") / "funcionario_bd.txt" 
 funcionarios = []
 sair_do_sistema = False
 
@@ -18,8 +18,8 @@ def apresenta_menu():
 
 def cadastrar_funcionário():
     funcionário = input("digite o nome do funcionario: ")
-    with open(Path("Sincro_Escala/BD") / "funcionario_bd.txt","w", encoding="utf-8") as arquivo:
-            arquivo.write(funcionário)
+    with open(path_bd,"a", encoding="utf-8") as arquivo:
+        arquivo.write(f"{funcionário}\n")
     funcionarios.append(funcionário)
     print(f"O nome cadastrado foi: {funcionário}")
     print("======================================")
@@ -34,10 +34,11 @@ def cadastrar_funcionário():
         print("cadastro concluido ✅")
      
 def listar_funcionarios():
-    print("listando funcionarios")
-    for idx, funcionário in enumerate (funcionarios, start=1):
-        print(f"{idx} - {funcionário}")
-
+    with open(path_bd,"r", encoding="utf-8") as arquivo:
+      for linha in arquivo:
+            nome_limpo = linha.strip()
+            print(nome_limpo)   
+   
 def sair():
     print("saindo do sistema de gestão de escala⏏️")
 #=======================================================================
