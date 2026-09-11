@@ -1,0 +1,6 @@
+eu
+leo
+"C:\Users\WINDOWS 11\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/WINDOWS 11/Documents/arthur/sincro_escala/main.py"
+"C:\Users\WINDOWS 11\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/WINDOWS 11/Documents/arthur/sincro_escala/main.py"
+"C:\Users\WINDOWS 11\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/WINDOWS 11/Documents/arthur/sincro_escala/main.py"
+"C:\Users\WINDOWS 11\AppData\Local\Programs\Python\Python314\python.exe" "c:/Users/WINDOWS 11/Documents/arthur/sincro_escala/main.py"
