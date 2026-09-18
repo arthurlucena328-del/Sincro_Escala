@@ -11,7 +11,6 @@ def cadastrar_funcionários():
     funcionário = input("digite o nome do funcionario: ")
     with open(path_bd,"a", encoding="utf-8") as arquivo:
             arquivo.write(f"{funcionário}\n")
-    funcionarios.append(funcionário)
     print(f"O nome cadastrado foi: {funcionário}")
     print("======================================")
     print("você gostaria de adicionar um novo funcionário?")
@@ -28,7 +27,10 @@ def listar_funcionários():
     with open(path_bd,"r", encoding="utf-8") as arquivo:
         for linha in arquivo:
             nome_limpo = linha.strip()
-            print(nome_limpo)
+            if nome_limpo not in funcionarios:   
+                funcionarios.append(nome_limpo) 
+    
+    print("\n".join(funcionarios))
             
 def excluir_funcionários():
     listar_funcionários()
