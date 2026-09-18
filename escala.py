@@ -7,7 +7,6 @@ def cadastrar_escala():
     escala = input("digite o nome da escala: ")
     with open(path_bd,"a", encoding="utf-8") as arquivo:
             arquivo.write(f"{escala}\n")
-    escalas.append(escala)
     print(f"A escala cadastrada foi: {escala}")
     print("======================================")
     print("você gostaria de cadastrar novas escalas?")
